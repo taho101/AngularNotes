@@ -3,7 +3,7 @@
 <head>
   <title>Angular Notes</title>
   <% #= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <% #= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  
   <%= csrf_meta_tags %>
   
   <!-- move them to proper stylesheet loaders -->
@@ -14,9 +14,9 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
   
-  <script type="text/javascript">    
-	 angular.module('angularNotes', ['ngMaterial']);
-  </script>
+  <%= javascript_include_tag 'underscore-min' %>
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag 'models' %>
 </head>
 <body ng-app="angularNotes" ng-cloak>
 
